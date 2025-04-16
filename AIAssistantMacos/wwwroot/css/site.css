@@ -20,3 +20,36 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.inter-font-medium {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.inter-font-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inter-font-semibold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.text-gray {
+  color: #595959;
+}
+
+.text-black {
+  color: #000000;
+}
+
+.navbar-nav.gap-115 .nav-item:not(:last-child) {
+  margin-right: 115px;
+}
