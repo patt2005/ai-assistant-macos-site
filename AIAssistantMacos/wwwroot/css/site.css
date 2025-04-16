@@ -8,7 +8,11 @@ html {
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
@@ -52,4 +56,136 @@ body {
 
 .navbar-nav.gap-115 .nav-item:not(:last-child) {
   margin-right: 115px;
+}
+
+/* Scroll Indicator Styles */
+.scroll-indicator {
+  display: inline-block;
+  margin: 20px auto;
+}
+
+.mouse {
+  width: 26px;
+  height: 40px;
+  border: 2px solid #6f42c1;
+  border-radius: 20px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.wheel {
+  width: 4px;
+  height: 8px;
+  background: #6f42c1;
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  -webkit-animation: mouse-scroll 1.5s infinite;
+  -moz-animation: mouse-scroll 1.5s infinite;
+  -o-animation: mouse-scroll 1.5s infinite;
+  animation: mouse-scroll 1.5s infinite;
+}
+
+@-webkit-keyframes mouse-scroll {
+  0% {
+    opacity: 1;
+    top: 4px;
+  }
+
+  100% {
+    opacity: 0;
+    top: 25px;
+  }
+}
+
+@-moz-keyframes mouse-scroll {
+  0% {
+    opacity: 1;
+    top: 4px;
+  }
+
+  100% {
+    opacity: 0;
+    top: 25px;
+  }
+}
+
+@-o-keyframes mouse-scroll {
+  0% {
+    opacity: 1;
+    top: 4px;
+  }
+
+  100% {
+    opacity: 0;
+    top: 25px;
+  }
+}
+
+@keyframes mouse-scroll {
+  0% {
+    opacity: 1;
+    top: 4px;
+  }
+
+  100% {
+    opacity: 0;
+    top: 25px;
+  }
+}
+
+/* Pricing Section Styles */
+.pricing-section .card {
+  transition: transform 0.3s ease;
+}
+
+.pricing-section .card:hover {
+  transform: translateY(-5px);
+}
+
+/* FAQ Section Styles */
+.accordion-button {
+  color: #6B46C1;
+  background-color: transparent;
+  border: none;
+  box-shadow: none !important;
+  padding: 1rem 0;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #6B46C1;
+  background-color: transparent;
+}
+
+.accordion-button::after {
+  content: '+';
+  background-image: none;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #6B46C1;
+}
+
+.accordion-button:not(.collapsed)::after {
+  content: '-';
+  transform: none;
+  background-image: none;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #E2E8F0;
+}
+
+/* Blog Section Styles */
+.blog-section .card {
+  transition: transform 0.3s ease;
+}
+
+.blog-section .card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-section .card-img-top {
+  border-radius: 8px;
 }
