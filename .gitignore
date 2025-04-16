@@ -1,0 +1,81 @@
+# --------------------------------------
+# JetBrains Rider
+# --------------------------------------
+.idea/
+*.sln.iml
+
+# --------------------------------------
+# Build results
+# --------------------------------------
+bin/
+obj/
+out/
+
+# --------------------------------------
+# User-specific files
+# --------------------------------------
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# --------------------------------------
+# Rider working dirs
+# --------------------------------------
+.idea/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/vcs.xml
+
+# --------------------------------------
+# ASP.NET Secrets
+# --------------------------------------
+**/appsettings.Development.json
+**/secrets.json
+secrets.json
+
+# Optional: if you're using the `dotnet user-secrets` CLI
+**/.vs/**/*.db
+
+# --------------------------------------
+# Publish artifacts
+# --------------------------------------
+*.publish.xml
+*.PublishSettings
+
+# --------------------------------------
+# Logs
+# --------------------------------------
+*.log
+
+# --------------------------------------
+# Temporary files
+# --------------------------------------
+*.tmp
+*.bak
+*.swp
+
+# --------------------------------------
+# Environment files
+# --------------------------------------
+.env
+.env.*
+
+# --------------------------------------
+# Node.js if used for frontend
+# --------------------------------------
+node_modules/
+npm-debug.log
+yarn.lock
+package-lock.json
+
+# --------------------------------------
+# Other common ignores
+# --------------------------------------
+*.vspscc
+.vscode/
+.DS_Store
+Thumbs.db
