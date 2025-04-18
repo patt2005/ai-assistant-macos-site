@@ -4,6 +4,11 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"]</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/AIAssistantMacos.styles.css" asp-append-version="true"/>
@@ -21,7 +26,12 @@
 <header>
     <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
         <div class="container">
-            <a class="navbar-brand fw-bold text-purple" asp-area="" asp-page="/Index">Agent AI</a>
+            <a class="navbar-brand fw-bold text-purple d-flex align-items-center gap-2"
+               asp-area=""
+               asp-page="/Index">
+                <img src="~/icon-512.png" alt="Agent AI Logo" style="height: 28px; width: 28px;" />
+                Agent AI
+            </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
                     aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +39,6 @@
             </button>
 
             <div class="collapse navbar-collapse justify-content-between" id="mainNavbar">
-                <!-- Left nav items -->
                 <ul class="navbar-nav mx-auto w-auto gap-115">
                     <li class="nav-item">
                         <a class="nav-link text-gray inter-font-medium" href="/#features">Features</a>
@@ -62,7 +71,7 @@
     <div class="container px-4">
         <div class="row text-white">
             <div class="col-md-4 mb-4 mb-md-0">
-                <h4 class="mb-3 fw-bold">AI Site Design</h4>
+                <h4 class="mb-3 fw-bold">Agent AI</h4>
                 <p class="text-white-50">
                     Your intelligent assistant for macOS that enhances productivity, automates tasks,
                     and enables seamless creativity with smart features powered by AI.
