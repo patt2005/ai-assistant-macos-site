@@ -1,0 +1,33 @@
+@using System.Globalization
+
+@model AIAssistantMacos.Persistance.Entities.Blog
+
+<div class="col-12 col-md-6 col-lg-4 mb-4">
+    <a href="@($"/blog/{Model.Id}")" class="text-decoration-none text-dark" style="display: block;">
+        <div class="blog-card text-start px-2">
+            <img src="@Model.ImageUrl" alt="Blog image" class="img-fluid rounded-3 mb-3" style="aspect-ratio: 16/9; object-fit: cover;" />
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="fw-bold text-purple m-0">@Model.Title</h5>
+                <small class="text-muted text-capitalize">
+                    @Model.PublishDate.ToString("d MMMM yyyy", CultureInfo.InvariantCulture).ToLower()
+                </small>
+            </div>
+
+            <p class="text-secondary mt-2">
+                @((Model.SubTitle?.Length ?? 0) > 300 ? Model.SubTitle.Substring(0, 300) + "..." : Model.SubTitle)
+            </p>
+        </div>
+    </a>
+</div>
+
+<style>
+    .blog-card {
+        max-width: 500px;
+        margin: auto;
+    }
+
+    .text-purple {
+        color: #6B46C1;
+    }
+</style>

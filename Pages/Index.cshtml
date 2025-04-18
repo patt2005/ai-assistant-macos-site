@@ -1,0 +1,341 @@
+﻿@page "/"
+
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Agent AI";
+}
+
+<div class="container pt-5">
+    <div class="row justify-content-center align-items-center my-5">
+        <div class="col-md-6" style="background-color: transparent !important; padding: 0 !important; border: none !important;">
+            <img src="https://s3-alpha-sig.figma.com/img/1096/a900/0501926ad8acbf7eb2eb0658d6625077?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=QRlb6E0PsWuO4IQquGsTIIfi500w-cX~qrBW6HLPGZGpLHcxJY83OsegvHg0hx6xWbleyeMvQ7fKotiQK9NBgQxBUGsquELl1K0a0PIa8uZnM5qQnjYAAS2Z0jlkXZKWXx6MPeBGmF40gnBMDWkIFFMwbtO-aP7ITICEDCJMaNGu5tWLI0XJZPuLRXiSoxmNJ2FNLpVwQBUi6jpAy2h5v8P4XN2LrHC79hIUjSTxRMPbVWze-DDfVsZzCJ55KPdbXGYiZ-Gh2b~3C9eKYK7gZ4a7~Q-buBUPwwbWSnPqEMUt-NyTQc8aBX7kBfMjCdeWINfCTDLF0tpRsdxj326inw__"
+                 class="img-fluid animate__animated animate__fadeIn"
+                 style="width: 1400px; height: auto; background-color: transparent; mix-blend-mode: normal;"
+                 alt="Demo Animation" />
+        </div>
+        <div class="col-md-6 d-flex flex-column align-items-end text-end pe-5" style="padding-right: 4rem;">
+            <h2 class="inter-font-semibold mb-2" style="font-size: 2rem;">
+                Your AI Assistant for
+            </h2>
+            <h1 id="animated-text"
+                class="animated-gradient-text inter-font-semibold mb-4"
+                style="font-size: 3rem; line-height: 1.2;">
+            </h1>
+            <a href="#">
+                <img src="https://user-images.githubusercontent.com/37590873/219133640-8b7a0179-20a7-4e02-8887-fbbd2eaad64b.png"
+                     alt="Download on Mac App Store"
+                     style="width: 220px; height: auto;" />
+            </a>
+        </div>
+    </div>
+</div>
+
+<div style="height: 30px;"></div>
+
+<section class="features-section my-5 py-5 pt-5" id="features">
+    <div class="container">
+        <h2 class="text-center display-5 mb-4 inter-font-semibold">Features</h2>
+        <p class="text-center text-muted mb-5 inter-font-regular" style="font-size: 1.2rem; max-width: 800px; margin: 0 auto">
+            Discover how your AI assistant for macOS can transform the way you work. Whether you're editing, searching, generating images, or automating tasks, you have it all in one place, without leaving your desktop.
+        </p>
+
+        <div style="height: 100px;"></div>
+        
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6">
+                <h2 class="feature-title inter-font-semibold" style="color: #6f42c1; font-size: 2rem;">Smart Navigation & Instant Actions</h2>
+                <p class="text-muted mt-3 inter-font-regular" style="font-size: 1.1rem; line-height: 1.6;">
+                    Let your AI Assistant understand your screen and take action—instantly. With real-time screen awareness, the assistant knows exactly where to click, type, or scroll—no more searching through menus or repetitive clicks. Just describe what you need, and it gets done.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="https://s3-alpha-sig.figma.com/img/c8ce/dddd/a01f176baafff2c96679624c56e76299?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=dCQAWaO0S9eLx-Y3qjVGuzqmBY33wFKdZ0qxM~t0VX1~7kAcRiszjRPDMnSjJ~EmskThfJU9zH39qo8txwmOBZ9erpcd5O34jtEcoxQbT1xEkjYJLGvRAdzcpUjIzdVyxU28FAf1IfEKlHRFCoDzw8T8sE5aII5griqIyiIGz05di~85NEccHJf0LeP8Hu9Lute9M2ibPFCyROVXM1lXJTjw~5MEMTuoHjCCjTLIGFI6pKRHERoHN2k6xiWcrf66ImvJ51VPDswlk~9OodQDHnVWrHPIUMBe1qEz5z4fNJfTmo~1swr2LIx-lo2gOh7Mz2jC0wfbwGReRU7vOjVtIA__" 
+                     class="img-fluid"
+                     style="width: 1250px; height: auto;"
+                     alt="Screen Context Understanding Feature" />
+            </div>
+        </div>
+
+        <div style="height: 100px;"></div>
+        
+        <div class="row align-items-center mb-5 flex-md-row-reverse">
+            <div class="col-md-6">
+                <h2 class="feature-title inter-font-semibold" style="color: #6f42c1; font-size: 2rem;">Increase Your Productivity</h2>
+                <p class="text-muted mt-3 inter-font-regular" style="font-size: 1.1rem; line-height: 1.6;">
+                    Automate repetitive workflows and focus on what matters. Whether you’re managing files, opening apps, or navigating websites, the AI Assistant handles routine digital tasks for you—saving time and boosting efficiency throughout your workday.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="https://s3-alpha-sig.figma.com/img/e75b/6acd/e82ba1e215c392da1894d9cafe0b3119?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Qr8Fs-hHH~IoestkljJ1lUMTDAeZVp6ChxXE6tvBI8tvjNAoyzlr1DxPfeadwkV1BuNtPwbYPbCKLhLiYcfMwin1NAJOygwlRQYMc7q05lrHy1ANx6lPb06bfPuxSNWNbhnnJ3iWsKVOo~enTXlYL3MIzJLSxp3YQtJu7zeUkg0dtsIifhbvxyItf~QD5yEpmtdVFQQAPtof~KN0gFf5nkxMiR4eV~dRU3yEwpOti2tAvTqLCmX22LdySzVYuW94rzadjQy8Iswl4fTaN75ZVI8zD86ATsmeVGIXuVyexs75EuOsUClusyM-EjV7uYpymHKjro-UvTDpyMDDMF1tEQ__" 
+                     class="img-fluid" 
+                     style="width: 1250px; height: auto;"
+                     alt="AppleScript Commands Feature" />
+            </div>
+        </div>
+
+        <div style="height: 100px;"></div>
+        
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2 class="feature-title inter-font-semibold" style="color: #6f42c1; font-size: 2rem;">Automate Everyday Tasks</h2>
+                <p class="text-muted mt-3 inter-font-regular" style="font-size: 1.1rem; line-height: 1.6;">
+                    Let your assistant take care of the repetitive stuff. Whether it’s organizing files, launching apps, or controlling settings, your AI Assistant automates actions with a single command so you can stay focused on what really matters.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="https://s3-alpha-sig.figma.com/img/1c21/fbe9/817fd21c52baac974206c0004205626c?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=KTMsmv-8VnsP-~AKbiNRvAuNIUAv3e6rM~31ntXlaIATQMmiWJbcOVAK5Zri2YTtMegpqDq8oAdXLpSkro-ng4gnsYpDfJUJBeR1EuIyaJokeXP6qBa6SUX9y~Kvr5HfjkaXssioWoQ~ADnT4ErXq0mDH3XwYCHPQQx09Qo4ZdP2urWecMyOIF5Lg-pYqlBFr3xoy1Zcxnxtni5YgaqHJQr2iNs8TmumYxX-14F22nME9OOeUJ6wxHkYAOq-IyOdFA~WpOxjum9MSvpYEwD7ooAwmRZrbRzA3Wcuut0cDQqvpQcomfnbGDUVEtV8U53Mt4yYo5WOIlS7Zv30lB3l1Q__" 
+                     class="img-fluid"
+                     style="width: 1250px; height: auto;"
+                     alt="Enhance with AI Feature" />
+            </div>
+        </div>
+
+        <div style="height: 50px;"></div>
+    </div>
+</section>
+
+<section class="pricing-section position-relative py-5 w-100 vw-100" id="pricing">
+    <div class="purple-background"></div>
+    <div class="container-fluid px-0">
+        <div class="content-wrapper px-4">
+            <h2 class="text-center display-4 mb-5 text-white inter-font-semibold">
+                Unlock the Full Power of Your AI Agent
+            </h2>
+
+            <div class="row justify-content-center gap-4 mx-0">
+                <div class="col-md-5">
+                    <div class="card h-100 p-4 border-2" style="border-color: #6B46C1;">
+                        <div class="card-body d-flex flex-column h-100">
+                            <h3 class="display-5 mb-3 inter-font-medium">Free</h3>
+                            <p class="mb-4">This plan includes:</p>
+                            <ul class="list-unstyled">
+                                <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Use up to 3 AI commands per day</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Access to basic screen navigation</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Slower AI response time</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Executes basic tasks only</li>
+                            </ul>
+                            <div class="flex-grow-1"></div>
+                            <button class="btn btn-light w-100 mt-4 fake-disabled">Try now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-5">
+                    <div class="card h-100 p-4" style="border: 2px solid #FF00FF;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h3 class="display-5 inter-font-medium">Pro</h3>
+                                <div class="h3 mb-0">
+                                    $<span class="display-5">19.99</span><small class="text-muted">/month</small>
+                                </div>
+                            </div>
+                            <p class="mb-4">This plan includes:</p>
+                            <ul class="list-unstyled">
+                                <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Unlimited AI command executions</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Faster AI task responses</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Access to ChatGPT Operator model</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Priority job processing</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Full access to smart automation features</li>
+                                <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Executes complex and high-difficulty tasks</li>
+                            </ul>
+                            <button class="btn btn-primary w-100 mt-4" style="background-color: #6B46C1; border: none;">
+                                Unlock Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="faq-section py-5" id="faq">
+    <div class="container">
+        <h2 class="display-4 mb-5 inter-font-semibold">FAQ</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item border-0 mb-3 px-4 rounded-4">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        What is AI Assistant for macOS and how does it work?
+                    </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" style="padding-left: 0;">
+                        Agent AI is a macOS app that uses advanced AI to automate desktop tasks, generate content, and provide instant assistance through natural language commands.
+                        It understands natural language prompts and can perform actions on your screen like clicking, typing, or launching applications with minimal effort.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item border-0 mb-3 px-4 rounded-4">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        Do I need an internet connection to use AI Assistant?
+                    </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" style="padding-left: 0;">
+                        Yes, the assistant relies on cloud-based AI models and APIs, so a stable internet connection is required for it to function properly.
+                        Without internet access, the assistant won’t be able to process commands or generate responses effectively.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item border-0 mb-3 px-4 rounded-4">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                        What’s the difference between the Free and Pro plans?
+                    </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" style="padding-left: 0;">
+                        The Free plan allows limited AI usage with slower response times and access to only basic features.
+                        The Pro plan unlocks complex task execution, faster AI responses, and priority processing for a smoother and more powerful experience.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item border-0 mb-3 px-4 rounded-4">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                        Can I cancel my Pro subscription at any time?
+                    </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" style="padding-left: 0;">
+                        Yes, you can cancel your subscription at any time. Your Pro access will remain active until the end of your current billing period.
+                        You won't be charged again once the current billing cycle ends, and you can resubscribe whenever you need.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item border-0 mb-3 px-4 rounded-4">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                        Is my data safe when using AI Assistant?
+                    </button>
+                </h2>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" style="padding-left: 0;">
+                        Absolutely. We do not store or share your data. All commands and interactions are processed securely via encrypted channels.
+                        We follow strict privacy and security standards to ensure your information remains private and protected at all times.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="blog-section py-5" id="blog">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <h2 class="display-4 mb-0 inter-font-semibold">Blog</h2>
+            <a href="/blog" class="text-decoration-none" style="color: #6B46C1;">See all</a>
+        </div>
+
+        <div class="row">
+            @foreach (var blog in Model.Blogs.Take(3))
+            {
+                <partial name="_BlogPostCard" model="@blog"/>
+            }
+        </div>
+    </div>
+</section>
+
+<script>
+    const words = [
+        "Business Strategy",
+        "Marketing Automation",
+        "Code Generation",
+        "Productivity Boost",
+        "Creative Writing",
+        "Task Management",
+        "Social Media Planning",
+        "Content Creation",
+        "Customer Support",
+        "Workflow Automation"
+    ];
+    
+    let index = 0;
+    const element = document.getElementById("animated-text");
+
+    function animateWordChange() {
+        element.classList.remove("fade-in");
+        element.classList.add("fade-out");
+
+        setTimeout(() => {
+            element.textContent = words[index];
+            element.classList.remove("fade-out");
+            element.classList.add("fade-in");
+            index = (index + 1) % words.length;
+        }, 500);
+    }
+    
+    element.textContent = "Productivity";
+
+    animateWordChange();
+    setInterval(animateWordChange, 3000);
+</script>
+
+<style>
+.purple-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3f00bf;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+}
+
+.fake-disabled {
+    pointer-events: auto;
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+@@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-10px); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease-in forwards;
+}
+
+.animated-gradient-text {
+    background: linear-gradient(45deg, #6f42c1, #007bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.footer-section .purple-background {
+    background: #6B46C1;
+}
+
+.pricing-section, .footer-section {
+    margin: 0;
+    padding: 5rem 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+</style>

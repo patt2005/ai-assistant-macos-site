@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/AIAssistantMacos.styles.css" asp-append-version="true"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Hammersmith+One&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Koulen&family=Lexend+Deca:wght@100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+    html {
+        scroll-behavior: smooth;
+    }
+    </style>
+</head>
+<body style="background-color: #fafafa;">
+<header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-purple" asp-area="" asp-page="/Index">Agent AI</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="mainNavbar">
+                <!-- Left nav items -->
+                <ul class="navbar-nav mx-auto w-auto gap-115">
+                    <li class="nav-item">
+                        <a class="nav-link text-gray inter-font-medium" href="/#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-gray inter-font-medium" href="/#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-gray inter-font-medium" href="/#faq">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-gray inter-font-medium" href="/blog">Blog</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a class="btn btn-link text-black fw-semibold text-decoration-none" href="#">Try for Free</a>
+                    <a class="btn btn-dark shadow text-white" style="box-shadow: 0 0 8px #915EFF;" href="#">Get Plan</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container-fluid" style="padding-left: 2px; padding-right: 2px;">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div>
+
+<footer class="footer-section position-relative py-5 w-100 vw-100 m-0" style="background-color: #3f00bf;">
+    <div class="container px-4">
+        <div class="row text-white">
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h4 class="mb-3 fw-bold">AI Site Design</h4>
+                <p class="text-white-50">
+                    Your intelligent assistant for macOS that enhances productivity, automates tasks,
+                    and enables seamless creativity with smart features powered by AI.
+                </p>
+            </div>
+            <div class="col-md-2 mb-4 mb-md-0">
+                <h6 class="fw-semibold mb-3 text-uppercase">Product</h6>
+                <ul class="list-unstyled">
+                    <li><a href="/features" class="text-white-50 text-decoration-none">Features</a></li>
+                    <li><a href="/pricing" class="text-white-50 text-decoration-none">Pricing</a></li>
+                    <li><a href="/download" class="text-white-50 text-decoration-none">Download</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 mb-4 mb-md-0">
+                <h6 class="fw-semibold mb-3 text-uppercase">Company</h6>
+                <ul class="list-unstyled">
+                    <li><a href="/about" class="text-white-50 text-decoration-none">About Us</a></li>
+                    <li><a href="/blog" class="text-white-50 text-decoration-none">Blog</a></li>
+                    <li><a href="/careers" class="text-white-50 text-decoration-none">Careers</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 mb-4 mb-md-0">
+                <h6 class="fw-semibold mb-3 text-uppercase">Legal</h6>
+                <ul class="list-unstyled">
+                    <li><a href="/privacy" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
+                    <li><a href="/terms" class="text-white-50 text-decoration-none">Terms of Use</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h6 class="fw-semibold mb-3 text-uppercase">Support</h6>
+                <ul class="list-unstyled">
+                    <li><a href="/contact" class="text-white-50 text-decoration-none">Contact</a></li>
+                    <li><a href="/support" class="text-white-50 text-decoration-none">Help Center</a></li>
+                    <li><a href="/status" class="text-white-50 text-decoration-none">System Status</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr class="my-4" style="border-color: #ffffff;" />
+        <div class="row">
+            <div class="col-12 text-center">
+                <small class="text-white-50">&copy; 2025 Agent AI. All rights reserved.</small>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

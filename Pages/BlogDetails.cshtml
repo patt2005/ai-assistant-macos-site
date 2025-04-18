@@ -1,0 +1,25 @@
+@page "/blog/{id}"
+@using System.Globalization
+@model BlogDetails
+
+@{
+    var blog = Model.Blog;
+}
+
+<div class="container pb-5">
+    <div class="text-center mb-5">
+        <img src="@blog.ImageUrl" alt="Blog image" class="img-fluid rounded-4" style="aspect-ratio: 16/9; object-fit: cover; max-height: 500px;" />
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1 class="fw-bold">@blog.Title</h1>
+        <span class="text-muted text-capitalize">@blog.PublishDate.ToString("d MMMM yyyy", CultureInfo.InvariantCulture).ToLower()</span>
+    </div>
+
+    <div class="text-secondary fs-5 lh-lg">
+        <div class="text-secondary fs-5 lh-lg">
+            @Html.Raw(blog.Text)
+        </div>
+    </div>
+
+</div>
