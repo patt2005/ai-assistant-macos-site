@@ -10,4 +10,5 @@ public class AppDbContext : DbContext
 
     public DbSet<Blog> Blogs { get; set; }
     public DbSet<User> Users { get; set; }
+    public DbSet<Code> Codes { get; set; }
 }

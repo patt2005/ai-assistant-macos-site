@@ -1,0 +1,40 @@
+@page "/success"
+
+@model CheckoutSuccessModel
+
+@{
+    ViewData["Title"] = "Checkout Success";
+}
+
+<div class="container text-center mt-5">
+    <img src="https://static.vecteezy.com/system/resources/previews/053/457/414/non_2x/green-check-mark-button-3d-on-transparent-background-free-png.png" alt="Checkout successful" style="max-width: 150px;" class="mb-4" />
+
+    <h2 class="fw-bold mb-3">You're All Set!</h2>
+    <p class="text-muted mb-4" style="max-width: 500px; margin: 0 auto;">
+        Your purchase was successful. Use the activation code below to unlock Pro features in the Agent AI app.
+    </p>
+
+    <div class="d-inline-flex align-items-center bg-light rounded shadow-sm px-4 py-2 mb-3">
+        <span id="activationCode" class="me-3 fw-semibold text-uppercase" style="font-size: 1.2rem;">
+            @Model.ActivationCode
+        </span>
+        <button class="btn btn-sm btn-outline-secondary" onclick="copyCode()">Copy</button>
+    </div>
+
+    <p class="text-muted mb-4">You will also receive this code by email for later use.</p>
+
+    <a href="/" class="btn btn-primary px-4 py-2" style="background-color: #6B46C1; border: none;">
+        Back to Homepage
+    </a>
+</div>
+
+@section Scripts {
+<script>
+    function copyCode() {
+        const code = document.getElementById("activationCode").innerText;
+        navigator.clipboard.writeText(code).then(() => {
+            alert("Activation code copied to clipboard!");
+        });
+    }
+</script>
+}

@@ -3,6 +3,7 @@ using System;
 using AIAssistantMacos.Persistance;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AIAssistantMacos.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250420091942_AddedProductEntity")]
+    partial class AddedProductEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -58,33 +61,32 @@ namespace AIAssistantMacos.Migrations
                     b.ToTable("blogs");
                 });
 
-            modelBuilder.Entity("AIAssistantMacos.Persistance.Entities.Code", b =>
+            modelBuilder.Entity("AIAssistantMacos.Persistance.Entities.Product", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid")
+                    b.Property<string>("Id")
+                        .HasColumnType("text")
                         .HasColumnName("id");
 
-                    b.Property<DateTime?>("ActivatedAt")
-                        .HasColumnType("timestamp with time zone")
-                        .HasColumnName("activated-at");
+                    b.Property<string>("Description")
+                        .HasColumnType("text")
+                        .HasColumnName("description");
 
-                    b.Property<string>("Content")
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("text")
+                        .HasColumnName("image-url");
+
+                    b.Property<long>("Price")
+                        .HasColumnType("bigint")
+                        .HasColumnName("price");
+
+                    b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("text")
-                        .HasColumnName("content");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp with time zone")
-                        .HasColumnName("created-at");
-
-                    b.Property<int>("Status")
-                        .HasColumnType("integer")
-                        .HasColumnName("status");
+                        .HasColumnName("title");
 
                     b.HasKey("Id");
 
-                    b.ToTable("activation-codes");
+                    b.ToTable("products");
                 });
 
             modelBuilder.Entity("AIAssistantMacos.Persistance.Entities.User", b =>
@@ -93,33 +95,14 @@ namespace AIAssistantMacos.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid")
                         .HasColumnName("id");
-
-                    b.Property<Guid?>("CodeId")
-                        .HasColumnType("uuid")
-                        .HasColumnName("code-id");
 
                     b.Property<bool>("IsPro")
                         .HasColumnType("boolean")
                         .HasColumnName("is-pro");
 
-                    b.Property<DateTime>("RegisterDate")
-                        .HasColumnType("timestamp with time zone")
-                        .HasColumnName("registered-at");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("CodeId");
-
                     b.ToTable("users");
-                });
-
-            modelBuilder.Entity("AIAssistantMacos.Persistance.Entities.User", b =>
-                {
-                    b.HasOne("AIAssistantMacos.Persistance.Entities.Code", "Code")
-                        .WithMany()
-                        .HasForeignKey("CodeId");
-
-                    b.Navigation("Code");
                 });
 #pragma warning restore 612, 618
         }

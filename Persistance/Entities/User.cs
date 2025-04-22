@@ -9,4 +9,9 @@ public class User
     public Guid Id { get; set; }
     [Column("is-pro")]
     public bool IsPro { get; set; }
+    [Column("registered-at")]
+    public DateTime RegisterDate { get; set; }
+    [Column("code-id")]
+    public Guid? CodeId { get; set; }
+    public Code? Code { get; set; }
 }

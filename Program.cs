@@ -1,11 +1,36 @@
 using AIAssistantMacos.Persistance;
 using AIAssistantMacos.Services;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
+using Stripe;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var secretKey = Environment.GetEnvironmentVariable("STRIPE_SECRET_KEY");
+
+StripeConfiguration.ApiKey = secretKey;
+
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddScoped(sp => new HttpClient
+{
+    BaseAddress = new Uri("https://agent-ai-7kzmirsbfq-uc.a.run.app/") 
+});
+
+builder.Services.AddScoped<IEmailService, EmailService>();
+
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
 
 builder.Services.AddScoped<IBlogService, BlogService>();
 
@@ -53,6 +78,10 @@ using (var scope = app.Services.CreateScope())
 }
 
 app.UseAuthorization();
+
+app.UseCors();
+
+app.MapControllers();
 
 app.MapRazorPages();
 

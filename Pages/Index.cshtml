@@ -139,9 +139,11 @@
                                 <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Full access to smart automation features</li>
                                 <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Executes complex and high-difficulty tasks</li>
                             </ul>
-                            <button class="btn btn-primary w-100 mt-4" style="background-color: #6B46C1; border: none;">
-                                Unlock Now
-                            </button>
+                            <form method="post" asp-controller="Checkout" asp-action="CheckoutOrder">
+                                <button type="submit" class="btn btn-primary w-100 mt-4" style="background-color: #6B46C1; border: none;">
+                                    Unlock Now
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -256,7 +258,8 @@
         "Customer Support",
         "Workflow Automation"
     ];
-    
+
+
     let index = 0;
     const element = document.getElementById("animated-text");
 

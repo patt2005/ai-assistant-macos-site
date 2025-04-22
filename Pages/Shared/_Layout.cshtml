@@ -22,7 +22,7 @@
     }
     </style>
 </head>
-<body style="background-color: #fafafa;">
+<body class="d-flex flex-column min-vh-100" style="background-color: #fafafa;">
 <header>
     <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
         <div class="container">
@@ -55,19 +55,25 @@
                 </ul>
                 <div class="d-flex align-items-center gap-3">
                     <a class="btn btn-link text-black fw-semibold text-decoration-none" href="#">Try for Free</a>
-                    <a class="btn btn-dark shadow text-white" style="box-shadow: 0 0 8px #915EFF;" href="#">Get Plan</a>
+
+                    <form method="post" asp-controller="Checkout" asp-action="CheckoutOrder">
+                        <button type="submit" class="btn btn-dark shadow text-white" style="box-shadow: 0 0 8px #915EFF;">
+                            Get Plan
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
     </nav>
 </header>
-<div class="container-fluid" style="padding-left: 2px; padding-right: 2px;">
-    <main role="main" class="pb-3">
-        @RenderBody()
-    </main>
-</div>
 
-<footer class="footer-section position-relative py-5 w-100 vw-100 m-0" style="background-color: #3f00bf;">
+<main class="flex-grow-1">
+    <div class="container-fluid" style="padding-left: 2px; padding-right: 2px;">
+        @RenderBody()
+    </div>
+</main>
+
+<footer class="footer-section py-5 w-100" style="background-color: #3f00bf;">
     <div class="container px-4">
         <div class="row text-white">
             <div class="col-md-4 mb-4 mb-md-0">
@@ -121,6 +127,8 @@
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="js/site.js"></script>
 
 @await RenderSectionAsync("Scripts", required: false)
 </body>

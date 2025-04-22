@@ -1,0 +1,80 @@
+@page "/privacy"
+
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<div class="container py-5" style="max-width: 820px;">
+    <h1 class="mb-4 fw-bold">Privacy Policy</h1>
+
+    <p class="text-muted">
+        Last updated: April 22, 2025
+    </p>
+
+    <h5 class="fw-semibold mt-4">1. Introduction</h5>
+    <p>
+        Agent AI is a macOS application developed by <strong>CodBun SRL</strong> that enhances productivity through on-device AI automation. We take your privacy seriously and are committed to protecting your personal data. This policy explains how we collect, use, and protect your information.
+    </p>
+
+    <h5 class="fw-semibold mt-4">2. Data We Collect</h5>
+    <p>
+        Agent AI does <strong>not</strong> collect or transmit your screen content, user interactions, or input events to any remote server. All automation and AI processing takes place locally on your device.
+    </p>
+
+    <ul>
+        <li><strong>User ID:</strong> A unique identifier (UUID) is stored locally to help track message limits and activation status.</li>
+        <li><strong>Pro Status:</strong> We store a flag indicating whether you are a free or Pro user.</li>
+        <li><strong>Activation Code (if used):</strong> Stored locally and securely if redeemed.</li>
+    </ul>
+
+    <h5 class="fw-semibold mt-4">3. Local Permissions</h5>
+    <p>
+        Agent AI may request the following permissions to function correctly:
+    </p>
+    <ul>
+        <li><strong>Screen Recording:</strong> Required to analyze and understand visual UI elements for automation.</li>
+        <li><strong>Accessibility Access:</strong> Enables Agent AI to perform clicks, type input, and simulate interactions.</li>
+    </ul>
+    <p>
+        These permissions are only used locally. Nothing is recorded or sent externally.
+    </p>
+
+    <h5 class="fw-semibold mt-4">4. Purchase Information</h5>
+    <p>
+        Payments are securely handled via <a href="https://stripe.com" target="_blank">Stripe</a>. We do not store any payment credentials or billing data. Stripe may collect information according to their own privacy policy.
+    </p>
+
+    <h5 class="fw-semibold mt-4">5. Analytics</h5>
+    <p>
+        Agent AI does not use third-party analytics libraries. If telemetry is added in the future, it will be strictly opt-in and anonymous.
+    </p>
+
+    <h5 class="fw-semibold mt-4">6. Third-Party Services</h5>
+    <p>
+        Agent AI uses SendGrid to deliver email-based activation codes. Email addresses are only used for delivery and never shared, sold, or reused for marketing.
+    </p>
+
+    <h5 class="fw-semibold mt-4">7. Data Retention</h5>
+    <p>
+        All local data such as your UUID, Pro status, and message count is retained on your device. You may reset this data by reinstalling the app.
+    </p>
+
+    <h5 class="fw-semibold mt-4">8. Your Rights</h5>
+    <p>
+        As a user, you have the right to request deletion of any data we may hold or to ask questions about your data use. Contact us anytime at <a href="mailto:petru@codbun.com">petru@codbun.com</a>.
+    </p>
+
+    <h5 class="fw-semibold mt-4">9. Changes to this Policy</h5>
+    <p>
+        We may update this Privacy Policy as needed. Changes will be posted on this page, and your continued use of the application indicates your acceptance of the revised policy.
+    </p>
+
+    <h5 class="fw-semibold mt-4">10. Contact</h5>
+    <p>
+        For questions or concerns regarding this policy, please contact us at <a href="mailto:petru@codbun.com">petru@codbun.com</a>.
+    </p>
+
+    <div class="mt-5">
+        <a href="/" class="btn btn-outline-primary">Back to Homepage</a>
+    </div>
+</div>
